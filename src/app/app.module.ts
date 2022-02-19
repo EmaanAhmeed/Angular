@@ -21,7 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { DishService } from './services/dish.service';
-
+import { PromotinService } from './services/promotin.service';
 
 //import { AngularFontAwesomeModule } from 'angular-font-awesome';
 @NgModule({
@@ -49,7 +49,8 @@ import { DishService } from './services/dish.service';
     //,AngularFontAwesomeModule
   ],
   providers: [
-    DishService
+    DishService,
+    PromotinService
   ],
   bootstrap: [AppComponent]
 })
