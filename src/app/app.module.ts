@@ -22,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { DishService } from './services/dish.service';
 import { PromotinService } from './services/promotin.service';
+import { LeaderService } from './services/leader.service';
 
 //import { AngularFontAwesomeModule } from 'angular-font-awesome';
 @NgModule({
@@ -50,7 +51,8 @@ import { PromotinService } from './services/promotin.service';
   ],
   providers: [
     DishService,
-    PromotinService
+    PromotinService,
+    LeaderService
   ],
   bootstrap: [AppComponent]
 })
