@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
-import { faInfo } from '@fortawesome/free-solid-svg-icons';
-import { faList } from '@fortawesome/free-solid-svg-icons';
-import { faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { faHome,faSignIn,faInfo,faList,faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { LoginComponent } from '../login/login.component';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -13,9 +13,13 @@ faHm=faHome;
 faInf=faInfo;
 faLst=faList;
 faAddC=faAddressCard;
-  constructor() { }
+faSI=faSignIn;
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+  openLoginForm() {
+    this.dialog.open(LoginComponent, {width: '500px', height: '450px'});
   }
 
 }

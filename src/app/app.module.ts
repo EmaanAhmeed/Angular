@@ -19,10 +19,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { DishService } from './services/dish.service';
 import { PromotinService } from './services/promotin.service';
 import { LeaderService } from './services/leader.service';
+import { LoginComponent } from './login/login.component';
 
 //import { AngularFontAwesomeModule } from 'angular-font-awesome';
 @NgModule({
@@ -34,7 +36,8 @@ import { LeaderService } from './services/leader.service';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -46,13 +49,17 @@ import { LeaderService } from './services/leader.service';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MatDialogModule
     //,AngularFontAwesomeModule
   ],
   providers: [
     DishService,
     PromotinService,
     LeaderService
+  ],
+  entryComponents:[
+LoginComponent
   ],
   bootstrap: [AppComponent]
 })

@@ -4,6 +4,8 @@
     <a mat-button routerLink="/about" routerLinkActive="active"><span><fa-icon [icon]="faInf" size="lg"></fa-icon></span> About</a>
     <a mat-button routerLink="/menu" routerLinkActive="active"><span><fa-icon [icon]="faLst" size="lg"></fa-icon></span> Menu</a>
     <a mat-button routerLink="/contactus" routerLinkActive="active"><span><fa-icon [icon]="faAddC" size="lg"></fa-icon></span> Contact</a>
+    <span class="flex-spacer"></span>
+  <a mat-button (click)="openLoginForm()"><fa-icon [icon]="faSI" size="lg"></fa-icon> Login</a>
   </mat-toolbar>
   
   <div class="container jumbotron"
