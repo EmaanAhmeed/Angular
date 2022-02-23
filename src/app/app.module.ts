@@ -20,6 +20,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {MatDialogModule} from '@angular/material/dialog';
+import{MatFormFieldModule}from '@angular/material/form-field';
+import{MatInputModule}from '@angular/material/input' ;
+import{MatCheckboxModule}from '@angular/material/checkbox';
+import{FormsModule}from'@angular/forms';
 
 import { DishService } from './services/dish.service';
 import { PromotinService } from './services/promotin.service';
@@ -50,7 +54,11 @@ import { LoginComponent } from './login/login.component';
     MatCardModule,
     MatButtonModule,
     FontAwesomeModule,
-    MatDialogModule
+    MatDialogModule, 
+    FormsModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule
     //,AngularFontAwesomeModule
   ],
   providers: [
