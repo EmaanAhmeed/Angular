@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faFax } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope as faEnvelopeS } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faFax ,faEnvelope as faEnvelopeS } from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope as faEnvelopeR } from '@fortawesome/free-regular-svg-icons'; 
 import { faSkype } from '@fortawesome/free-brands-svg-icons';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Feedback,ContactType } from '../shared/feedback';
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -15,9 +16,30 @@ export class ContactComponent implements OnInit {
   faEnv=faEnvelopeS;
   faSky=faSkype;
   faEnvR=faEnvelopeR;
-  constructor() { }
+  feedbackForm:FormGroup;
+  feedback:Feedback;
+  contactType=ContactType;
+  constructor(private fb:FormBuilder) { 
+    this.createForm();
+  }
 
   ngOnInit(): void {
+  }
+  createForm(){
+this.feedbackForm=this.fb.group({
+firstname:'',
+lastname:'',
+telnum:0,
+email:'',
+agree:false,
+contacttype:'None',
+message:''
+});
+  }
+  onSubmit(){
+    this.feedback=this.feedbackForm.value;
+    console.log(this.feedback);
+    this.feedbackForm.reset();
   }
 
 }
